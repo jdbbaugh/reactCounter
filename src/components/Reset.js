@@ -4,7 +4,7 @@ const Reset = ({killCount}) => {
   const handleClick = () => {
     killCount()
   }
-  return <button onClick={handleClick}>Reset</button>
+  return <button className="dopeB" onClick={handleClick}>Reset</button>
 }
 
 export default Reset
