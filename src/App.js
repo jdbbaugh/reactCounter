@@ -8,17 +8,28 @@ function App() {
   const incrementCount = increment => {
     setCount(count + increment)
   }
+  const decrementCount = increment => {
+    setCount(count - increment)
+  }
   const killCount = () => {
     setCount(count - count)
   }
   return (
     <div className="App">
+      <h2>Add</h2>
       <Button increment={1} onClickFunction={incrementCount}  />
       <Button increment={10} onClickFunction={incrementCount}  />
       <Button increment={100} onClickFunction={incrementCount}  />
       <Button increment={1000} onClickFunction={incrementCount}  />
+      <h2>Subtract</h2>
+      <Button increment={1} onClickFunction={decrementCount}  />
+      <Button increment={10} onClickFunction={decrementCount}  />
+      <Button increment={100} onClickFunction={decrementCount}  />
+      <Button increment={1000} onClickFunction={decrementCount}  />
+      <br/>
       <Reset killCount={killCount} />
-      <span>{count}</span>
+      <br/>
+      <h1>{count}</h1>
     </div>
   )
 }
